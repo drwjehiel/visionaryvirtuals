@@ -235,18 +235,16 @@ a:hover {
   color: var(--brand-white);
 }
 
-/* FIX OUTLINE BUTTON */
-
-.btn-outline-primary {
-  color: var(--brand-secondary);
-  border: 2px solid var(--brand-secondary);
+.btn-brand-outline {
+  color: var(--brand-accent);
+  border: 2px solid var(--brand-accent);
   background: transparent;
   border-radius: 30px;
   padding: 10px 30px;
   font-weight: 600;
 }
 
-.btn-outline-primary:hover {
-  background: var(--brand-secondary);
-  color: #ffffff;
+.btn-brand-outline:hover {
+  background: var(--brand-accent);
+  color: #fff;
 }
