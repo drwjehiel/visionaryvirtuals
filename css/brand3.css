@@ -166,3 +166,98 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== PRICING CARD ===== */
+
+.pricing-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* Header */
+
+.pricing-header h3 {
+  font-size: 2.5rem;
+  color: var(--brand-primary);
+  margin-bottom: 5px;
+}
+
+.price-small {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.pricing-subtitle {
+  color: var(--brand-accent);
+  font-weight: 600;
+}
+
+/* Features */
+
+.pricing-features {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.pricing-features li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pricing-features li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--brand-accent);
+}
+
+/* Setup */
+
+.setup-section h5 {
+  margin-top: 10px;
+  color: var(--brand-primary);
+}
+
+.setup-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--brand-secondary);
+}
+
+.installment-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Investment Summary */
+
+.investment-summary h5 {
+  margin-bottom: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-row strong {
+  color: var(--brand-primary);
+}
+
+/* CTA spacing */
+
+.pricing-cta {
+  margin-top: 30px;
+}
