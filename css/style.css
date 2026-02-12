@@ -385,13 +385,22 @@ body:after {
             border-bottom-color: #fff;
             border-width: 10px;
             margin-left: -10px; }
-        .site-navbar .site-navigation .site-menu .has-children .dropdown a {
+          /*.site-navbar .site-navigation .site-menu .has-children .dropdown a {
           text-transform: none;
           letter-spacing: normal;
           -webkit-transition: 0s all;
           -o-transition: 0s all;
           transition: 0s all;
-          color: #000; }
+          color: #000; } */
+        /* replace the old rule that removes transitions */
+          .site-navbar .site-navigation .site-menu .has-children .dropdown a {
+            text-transform: none;
+            letter-spacing: normal;
+      /* was: transition: 0s all;  <- this prevents animations */
+            -webkit-transition: .18s all ease;
+            -o-transition: .18s all ease;
+            transition: .18s all ease;
+            color: #000; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown .active {
           color: #C2E54F !important; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
