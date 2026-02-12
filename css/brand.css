@@ -234,3 +234,14 @@ a:hover {
   background: var(--brand-secondary);
   color: var(--brand-white);
 }
+
+.btn-outline-primary {
+  color: var(--brand-accent);
+  border: 2px solid var(--brand-accent);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: var(--brand-accent);
+  color: #ffffff;
+}
