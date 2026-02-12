@@ -1,0 +1,100 @@
+/* ==============================
+   GLOBAL BRAND COLOR FIX
+   (Overrides old template colors)
+================================ */
+
+:root {
+
+  /* BRAND PALETTE */
+  --brand-primary: #262261;     /* Deep Navy */
+  --brand-secondary: #2B3C8E;   /* Royal Blue */
+  --brand-support: #006E65;     /* Deep Teal */
+  --brand-accent: #00A99D;      /* Bright Teal */
+
+  /* NEUTRALS */
+  --brand-dark: #111827;
+  --brand-light: #f8fafc;
+  --brand-white: #ffffff;
+  --text-muted: #6b7280;
+
+}
+
+/* ===== TEXT ===== */
+
+body {
+  color: var(--text-muted);
+  background: var(--brand-light);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--brand-primary);
+}
+
+/* ===== LINKS ===== */
+
+a {
+  color: var(--brand-secondary);
+}
+
+a:hover {
+  color: var(--brand-accent);
+}
+
+/* ===== BUTTONS ===== */
+
+.btn.btn-primary {
+  background: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+}
+
+.btn.btn-primary:hover {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+/* ===== NAVBAR ===== */
+
+.site-navbar {
+  background: var(--brand-white);
+}
+
+.site-logo a,
+.site-menu > li > a {
+  color: var(--brand-primary);
+}
+
+.site-menu > li > a:hover {
+  color: var(--brand-accent);
+}
+
+/* Sticky navbar colors */
+
+.sticky-wrapper.is-sticky .site-navbar .site-logo a {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* ===== SECTIONS ===== */
+
+.section-title:after {
+  background: var(--brand-accent);
+}
+
+.bg-light {
+  background-color: var(--brand-light) !important;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer,
+.footer {
+  background: var(--brand-primary);
+}
+
+.footer a:hover {
+  color: var(--brand-accent);
+}
