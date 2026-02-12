@@ -120,3 +120,38 @@ a.btn.btn-brand-outline:hover {
   background: var(--brand-accent);
   color: #ffffff;
 }
+
+/* ===== CTA BUTTON SYSTEM ===== */
+
+.btn-cta-primary {
+  background: var(--brand-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 32px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(43, 60, 142, 0.25);
+  transition: 0.25s ease;
+}
+
+.btn-cta-primary:hover {
+  background: var(--brand-primary);
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+
+.btn-cta-outline {
+  color: var(--brand-accent);
+  border: 2px solid var(--brand-accent);
+  background: transparent;
+  border-radius: 40px;
+  padding: 14px 32px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.btn-cta-outline:hover {
+  background: var(--brand-accent);
+  color: #ffffff;
+}
