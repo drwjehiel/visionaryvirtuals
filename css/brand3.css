@@ -21,6 +21,7 @@
   --elev-1: 0 10px 30px rgba(0,0,0,0.05);
   --elev-2: 0 18px 40px rgba(0,0,0,0.08);
   --focus-ring: rgba(0,169,157,0.12);
+  --border-muted: rgba(38,34,97,0.06);
 }
 
 /* ========= BASE ========== */
@@ -423,11 +424,12 @@ a:hover {
 
 /* ===== FAQ / Accordion ===== */
 .accordion .card {
-  border: none;
+  background: var(--brand-white);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: 12px;
   box-shadow: var(--elev-1);
+  border: 1px solid var(--border-muted);
 }
 
 .accordion-header .btn {
@@ -437,6 +439,8 @@ a:hover {
   color: var(--brand-primary);
   font-weight: 600;
   padding: 18px 20px;
+  background: var(--brand-light);
+  border: 0;
 }
 
 .accordion .card-body {
@@ -449,6 +453,7 @@ a:hover {
   content: '\25BE';
   float: right;
   transition: transform 0.25s ease;
+  color: var(--brand-secondary);
 }
 
 .accordion .collapse.show + .card-body,
@@ -459,4 +464,13 @@ a:hover {
 .accordion .collapse.show + .card-body,
 .accordion .btn[aria-expanded="true"]:after {
   transform: rotate(180deg);
+}
+
+/* Expanded state uses global brand color */
+.accordion .btn[aria-expanded="true"] {
+  background: var(--brand-secondary);
+  color: var(--brand-white);
+}
+.accordion .btn[aria-expanded="true"]:after {
+  color: var(--brand-white);
 }
