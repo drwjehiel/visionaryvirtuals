@@ -467,11 +467,6 @@ a:hover {
 }
 
 .accordion .collapse.show + .card-body,
-.accordion .collapse.show ~ .card-body {
-  /* no-op; keep body visible when expanded */
-}
-
-.accordion .collapse.show + .card-body,
 .accordion .btn[aria-expanded="true"]:after {
   transform: rotate(180deg);
 }
