@@ -420,3 +420,43 @@ a:hover {
   font-size: 0.9rem;
   color: var(--text-muted);
 }
+
+/* ===== FAQ / Accordion ===== */
+.accordion .card {
+  border: none;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: var(--elev-1);
+}
+
+.accordion-header .btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: var(--brand-primary);
+  font-weight: 600;
+  padding: 18px 20px;
+}
+
+.accordion .card-body {
+  background: var(--brand-white);
+  padding: 18px 20px;
+  color: var(--text-muted);
+}
+
+.accordion .btn:after {
+  content: '\25BE';
+  float: right;
+  transition: transform 0.25s ease;
+}
+
+.accordion .collapse.show + .card-body,
+.accordion .collapse.show ~ .card-body {
+  /* no-op; keep body visible when expanded */
+}
+
+.accordion .collapse.show + .card-body,
+.accordion .btn[aria-expanded="true"]:after {
+  transform: rotate(180deg);
+}
