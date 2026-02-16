@@ -53,6 +53,16 @@ a:hover {
   background: var(--brand-white);
 }
 
+/* Float the navbar so it stays visible while scrolling */
+.site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  box-shadow: 0 6px 18px rgba(38,34,97,0.06);
+}
+
 .site-logo a,
 .site-menu > li > a {
   color: var(--brand-primary);

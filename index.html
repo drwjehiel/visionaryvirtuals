@@ -535,6 +535,45 @@
 <script src="js/main.js"></script>
 
 <script>
+  // Smooth-scroll anchors while accounting for sticky navbar height
+  (function($){
+    $(function(){
+      function scrollToTarget(hash){
+        var target = $(hash);
+        if(!target.length) return;
+        var navHeight = $('.site-navbar').outerHeight() || 0;
+        $('html, body').animate({
+          scrollTop: target.offset().top - navHeight + 1
+        }, 400);
+      }
+
+      // Intercept same-page anchor clicks
+      $('a[href^="#"]').on('click', function(e){
+        var href = $(this).attr('href');
+        if(href && href.length > 1 && $(href).length){
+          e.preventDefault();
+          scrollToTarget(href);
+          // close mobile menu if open (uses existing toggle behavior)
+          if($('.site-mobile-menu').is(':visible')){
+            $('.js-menu-toggle').trigger('click');
+          }
+        }
+      });
+    });
+  })(jQuery);
+
+  // Ensure page content is offset below the fixed navbar
+  (function($){
+    function updateNavbarSpacing(){
+      var nav = $('.site-navbar');
+      if(!nav.length) return;
+      var h = nav.outerHeight() || 0;
+      $('.site-wrap').css('padding-top', h + 'px');
+    }
+    $(window).on('load resize', updateNavbarSpacing);
+    $(document).ready(updateNavbarSpacing);
+  })(jQuery);
+
   AOS.init({
     duration: 800,
     easing: 'ease-out-cubic',
