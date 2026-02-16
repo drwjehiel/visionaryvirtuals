@@ -16,7 +16,7 @@
   --text-muted: #4b5563;
 }
 
-/* ========= BASE ========= */
+/* ========= BASE ========== */
 
 body {
   color: var(--text-muted);
