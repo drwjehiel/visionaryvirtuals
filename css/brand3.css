@@ -13,7 +13,7 @@
 
   --brand-light: #eef2f7;       /* Light section background */
   --brand-white: #ffffff;
-  --text-muted: #6b7280;
+  --text-muted: #4b5563;
 }
 
 /* ========= BASE ========= */
@@ -122,9 +122,8 @@ a:hover {
 
 /* ========= CONTACT SECTION FIX ========= */
 
-#contact-section {
-  background: var(--brand-light);
-}
+/* Prefer the class-based `.contact-section` rule defined later.
+   Removed the ID-based rule to avoid conflicting backgrounds. */
 
 /* ========= FOOTER ========= */
 
@@ -141,13 +140,15 @@ a:hover {
   color: var(--brand-support);
 }
 
-/* ========= SVG LOGO HOVER ========= */
+/* ========= SVG / IMG LOGO HOVER ========= */
 
-.site-logo svg {
+.site-logo svg,
+.site-logo img {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.site-logo:hover svg {
+.site-logo:hover svg,
+.site-logo:hover img {
   transform: scale(1.08);
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
 }
@@ -157,7 +158,7 @@ a:hover {
   opacity: 0;
   transform: translateY(18px);
   transition-property: opacity, transform;
-  transition-duration: 600ms;
+  transition-duration: 800ms;
   transition-timing-function: cubic-bezier(.2,.9,.2,1);
   will-change: opacity, transform;
 }
@@ -216,7 +217,7 @@ a:hover {
 }
 
 .pricing-features li:before {
-  content: "✔";
+  content: "\2713";
   position: absolute;
   left: 0;
   color: var(--brand-accent);

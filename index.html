@@ -21,7 +21,7 @@
 <div class="site-wrap">
 
   <!-- MOBILE MENU -->
-  <div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu site-navbar-target" id="site-mobile-menu">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
         <span class="icon-close2 js-menu-toggle"></span>
@@ -62,7 +62,7 @@
               <li><a href="#contact-section" class="nav-link">Get Started</a></li>
             </ul>
           </nav>
-          <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle">
+          <a href="#" role="button" aria-controls="site-mobile-menu" aria-expanded="false" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle">
             <span class="icon-menu h3"></span>
           </a>
         </div>
@@ -428,6 +428,7 @@
 
 <!-- JS -->
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/aos.js"></script>
 <script src="js/main.js"></script>
