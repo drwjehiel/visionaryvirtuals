@@ -1028,6 +1028,82 @@ body:after {
     .footer a:hover {
       color: #000; }
 
+.hero-section {
+  background-image:
+    linear-gradient(rgba(8, 18, 30, 0.48), rgba(8, 18, 30, 0.48)),
+    url('../images/va-owner2.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-section.overlay:before {
+  background: linear-gradient(90deg, rgba(4, 12, 22, 0.34), rgba(4, 12, 22, 0.08));
+}
+
+.hero-section .container,
+.hero-section .container > .row {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 620px;
+    height: min(78svh, 760px);
+    background-image:
+      linear-gradient(rgba(8, 18, 30, 0.42), rgba(8, 18, 30, 0.58)),
+      url('../images/va-owner-phone.png');
+    background-size: cover;
+    background-position: center 35%;
+  }
+
+  .hero-section.overlay:before {
+    background: linear-gradient(180deg, rgba(4, 12, 22, 0.12), rgba(4, 12, 22, 0.64));
+  }
+
+  .hero-section,
+  .hero-section > .container,
+  .hero-section > .container > .row {
+    min-height: 620px;
+  }
+
+  .hero-section > .container > .row {
+    height: 100%;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(2rem, 8.5vw, 2.75rem);
+    line-height: 1.08;
+  }
+
+  .hero-section .lead {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1rem, 4.2vw, 1.2rem);
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-section {
+    min-height: 600px;
+    height: calc(100svh - 60px);
+    max-height: 720px;
+  }
+
+  .hero-section,
+  .hero-section > .container,
+  .hero-section > .container > .row {
+    min-height: 600px;
+  }
+
+  .hero-section .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 /* ==============================
    BRAND COLOR OVERRIDES
 ================================ */
@@ -1066,12 +1142,6 @@ h1, h2, h3, h4, h5 {
 
 .site-menu .nav-link:hover {
   color: var(--primary-color);
-}
-
-/* Hero overlay text */
-.site-blocks-cover h1,
-.site-blocks-cover p {
-  color: #ffffff;
 }
 
 /* Light sections */
